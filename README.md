@@ -99,7 +99,7 @@ OmniAuth.config.mock_auth[:auth0] = OmniAuth::AuthHash.new(
 |------|----------------|
 | `test/integration/auth0_login_integration_test.rb` | Existing fixture user logs in; first-time login creates a `User`; failed auth lands on the failure page |
 | `test/integration/dashboard_integration_test.rb` | Signed-in users reach `/dashboard`; guests are redirected to `/` |
-| `test/system/auth0_test.rb` | Optional smoke test: Login button works in a real browser with OmniAuth stubbed |
+| `test/system/authentication_test.rb` | Optional smoke test: Login button works in a real browser with OmniAuth stubbed |
 
 `test/fixtures/users.yml` defines `alice` with `auth0_uid: auth0|test-user-1` to match the default OmniAuth mock. Integration tests assert on `session[:user_id]`, `User` records, and redirect behavior.
 
@@ -113,7 +113,7 @@ bin/rails test
 bin/rails test test/integration/
 
 # Optional system smoke test (requires Chrome)
-bin/rails test:system test/system/auth0_test.rb
+bin/rails test:system test/system/authentication_test.rb
 ```
 
 No Auth0 credentials are required in test. Keep real domain, client ID, and client secret out of the test path — test mode short-circuits the OAuth request phase.
