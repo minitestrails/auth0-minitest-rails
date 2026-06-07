@@ -86,6 +86,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Set up Auth0 config
+        run: cp config/auth0.yml.example config/auth0.yml
+
       - name: Run tests
         env:
           RAILS_ENV: test
@@ -113,6 +116,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+
+      - name: Set up Auth0 config
+        run: cp config/auth0.yml.example config/auth0.yml
 
       - name: Run System Tests
         env:
