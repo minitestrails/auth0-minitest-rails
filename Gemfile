@@ -66,4 +66,4 @@ group :test do
 end
 
 gem "omniauth-auth0", "~> 3.0"
-gem "omniauth-rails_csrf_protection", "~> 1.0"
+gem "omniauth-rails_csrf_protection", "~> 2.0"
