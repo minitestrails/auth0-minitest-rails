@@ -1,0 +1,7 @@
+<main>
+  <h1>Authentication failed</h1>
+  <% if @error_msg.present? %>
+    <p><%= @error_msg %></p>
+  <% end %>
+  <%= link_to "Back to home", root_path %>
+</main>

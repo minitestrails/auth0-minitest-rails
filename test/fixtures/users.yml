@@ -1,0 +1,4 @@
+alice:
+  email: alice@example.com
+  auth0_uid: auth0|test-user-1
+  name: Alice Example

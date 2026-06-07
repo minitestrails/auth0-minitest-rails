@@ -1,0 +1,9 @@
+<main>
+  <h1>Dashboard</h1>
+  <p>Signed in as <%= @user.email %></p>
+  <p>Local user record:</p>
+  <pre><%= JSON.pretty_generate(@user.as_json(only: %i[id email auth0_uid name])) %></pre>
+  <p>Auth0 profile:</p>
+  <pre><%= JSON.pretty_generate(@userinfo) %></pre>
+  <%= button_to "Logout", "/auth/logout", method: :get, data: { turbo: false } %>
+</main>
