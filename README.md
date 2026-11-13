@@ -4,7 +4,7 @@ Sample Rails app for a [blog post](https://minitestrails.com/blog/testing-auth0-
 
 ## Prerequisites
 
-- Ruby 4.0.2 (see `.ruby-version`)
+- Ruby 4.0.9 (see `.ruby-version`)
 - Rails 8.1.3
 - An [Auth0](https://auth0.com/) account
 
